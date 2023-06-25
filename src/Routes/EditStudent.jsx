@@ -115,87 +115,87 @@ const EditStudent = () => {
                             bg={useColorModeValue('white', 'gray.700')}
                             boxShadow={'lg'}
                             p={8}
-                            >
-                        {!isLoading ? (
-                            <Stack spacing={4}>
-                            <HStack>
-                                <Box>
-                                    <FormControl id="firstName" isRequired>
-                                        <FormLabel>Full Name</FormLabel>
-                                        <Input type="text" data-testid='name' defaultValue={dataById.fullname}
-                                            onChange={(e) => setFullname(e.target.value)} />
-                                    </FormControl>
-                                </Box>
-                                <Box>
-                                    <Avatar size='xl' src={dataById.profilePicture} ml={10}></Avatar>
-                                </Box>
-                            </HStack>
+                        >
+                            {!isLoading ? (
+                                <Stack spacing={4}>
+                                    <FormControl>
+                                        <HStack>
+                                            <Box>
 
-                            <FormControl id="address" isRequired>
-                                <FormLabel>Address</FormLabel>
-                                <Input type="text" data-testid='address' defaultValue={dataById.address}
-                                    onChange={((e) => setAddress(e.target.value))} />
-                            </FormControl>
-                            <FormControl id="phoneNumber" isRequired>
-                                <FormLabel>Phone Number</FormLabel>
-                                <Input type="text" data-testid='phoneNumber' defaultValue={dataById.phoneNumber}
-                                    onChange={((e) => setPhoneNumber(e.target.value))} />
-                            </FormControl>
-                            <FormControl id="birthDate" isRequired>
-                                <FormLabel>Birth Date</FormLabel>
-                                <Input type="date" data-testid='date' defaultValue={dataById.birthDate}
-                                    onChange={(e) => setBirthDate(e.target.value)} />
-                            </FormControl>
-                            <FormControl>
-                                <FormLabel>Gender</FormLabel>
-                                <Select name="Gender" id="input-gender" defaultValue={dataById.gender} onChange={(e) => setGender(e.target.value)}
-                                    data-testid='gender'>
-                                    <option value="">-SELECT GENDER-</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </Select>
-                            </FormControl>
-                            <FormControl>
-                                <FormLabel>Program Study</FormLabel>
-                                <Select name="prody" id="input-prody" defaultValue={dataById.programStudy} onChange={(e) => setProgramStudy(e.target.value)}
-                                    data-testid='prody'>
-                                    <option value="">-SELECT PROGRAM STUDY-</option>
-                                    <option value="Ekonomi">Ekonomi</option>
-                                    <option value="Manajemen">Manajemen</option>
-                                    <option value="Akutansi">Akuntansi</option>
-                                    <option value="Administrasi Publik">Administrasi Publik</option>
-                                    <option value="Administrasi Bisnis">Administrasi Bisnis</option>
-                                    <option value="Hubungan Internasional">Hubungan Internasional</option>
-                                    <option value="Teknik Sipil">Teknik Sipil</option>
-                                    <option value="Arsitektur">Arsitektur</option>
-                                    <option value="Matematika">Matematika</option>
-                                    <option value="Fisika">Fisika</option>
-                                    <option value="Informatika">Informatika</option>
-                                </Select>
-                            </FormControl>
-                            <Stack spacing={10} pt={2}>
-                                <Button
-                                    loadingText="Submitting"
-                                    size="lg"
-                                    bg={'blue.400'}
-                                    color={'white'}
-                                    _hover={{
-                                        bg: 'blue.500',
-                                    }}
-                                    onClick={handleSubmit}
-                                >
-                                    Submit
-                                </Button>
-                            </Stack>
-                        </Stack>
-                        ):(
-                            <Text>Loading ...</Text>
-                        )}
-                            
+                                                <FormLabel>Full Name</FormLabel>
+                                                <Input type="text" data-testid='name' defaultValue={dataById.fullname}
+                                                    onChange={(e) => setFullname(e.target.value)} />
+
+                                            </Box>
+                                            <Box>
+                                                <Avatar size='xl' src={dataById.profilePicture} ml={10}></Avatar>
+                                            </Box>
+                                        </HStack>
+
+                                        <FormLabel>Address</FormLabel>
+                                        <Input type="text" data-testid='address' defaultValue={dataById.address}
+                                            onChange={((e) => setAddress(e.target.value))} />
+
+                                        <FormLabel>Phone Number</FormLabel>
+                                        <Input type="text" data-testid='phoneNumber' defaultValue={dataById.phoneNumber}
+                                            onChange={((e) => setPhoneNumber(e.target.value))} />
+
+                                        <FormLabel>Birth Date</FormLabel>
+                                        <Input type="date" data-testid='date' defaultValue={dataById.birthDate}
+                                            onChange={(e) => setBirthDate(e.target.value)} />
+
+
+                                        <FormLabel>Gender</FormLabel>
+                                        <Select name="Gender" id="input-gender" defaultValue={dataById.gender} onChange={(e) => setGender(e.target.value)}
+                                            data-testid='gender'>
+                                            <option value="">-SELECT GENDER-</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </Select>
+
+
+                                        <FormLabel>Program Study</FormLabel>
+                                        <Select name="prody" id="input-prody" defaultValue={dataById.programStudy} onChange={(e) => setProgramStudy(e.target.value)}
+                                            data-testid='prody'>
+                                            <option value="">-SELECT PROGRAM STUDY-</option>
+                                            <option value="Ekonomi">Ekonomi</option>
+                                            <option value="Manajemen">Manajemen</option>
+                                            <option value="Akutansi">Akuntansi</option>
+                                            <option value="Administrasi Publik">Administrasi Publik</option>
+                                            <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                                            <option value="Hubungan Internasional">Hubungan Internasional</option>
+                                            <option value="Teknik Sipil">Teknik Sipil</option>
+                                            <option value="Arsitektur">Arsitektur</option>
+                                            <option value="Matematika">Matematika</option>
+                                            <option value="Fisika">Fisika</option>
+                                            <option value="Informatika">Informatika</option>
+                                        </Select>
+
+                                        <Stack spacing={10} pt={2}>
+                                            <Button
+                                                loadingText="Submitting"
+                                                size="lg"
+                                                bg={'blue.400'}
+                                                color={'white'}
+                                                _hover={{
+                                                    bg: 'blue.500',
+                                                }}
+                                                onClick={handleSubmit}
+                                                data-testid='edit-btn'
+                                            >
+                                                Submit
+                                            </Button>
+                                        </Stack>
+                                    </FormControl>
+                                </Stack>
+                            ) : (
+                                <Text>Loading ...</Text>
+                            )}
+
                         </Box>
                     </Stack>
                 </Flex>
-                <Footer/>
+                <Footer />
             </div>
         </>
     );

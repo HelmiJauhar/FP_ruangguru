@@ -93,38 +93,34 @@ const AddStudent = () => {
                         boxShadow={'lg'}
                         p={8}>
                         <Stack spacing={4}>
-                            <HStack>
-                                <Box>
-                                    <FormControl id="firstName" isRequired>
+                            <FormControl>
+                                <HStack>
+                                    <Box>
                                         <FormLabel>Full Name</FormLabel>
                                         <Input type="text" data-testid='name'
-                    onChange={(e) => setFullname(e.target.value)}/>
-                                    </FormControl>
-                                </Box>
-                                <Box>
-                                    <FormControl id="lastName">
+                                            onChange={(e) => setFullname(e.target.value)} />
+
+                                    </Box>
+                                    <Box>
                                         <FormLabel>Profile Picture URL</FormLabel>
                                         <Input type="text" data-testid='profilePicture'
-                    onChange={((e) => setProfilePicture(e.target.value))}/>
-                                    </FormControl>
-                                </Box>
-                            </HStack>
-                            <FormControl id="address" isRequired>
+                                            onChange={((e) => setProfilePicture(e.target.value))} />
+
+                                    </Box>
+                                </HStack>
                                 <FormLabel>Address</FormLabel>
                                 <Input type="text" data-testid='address'
-                    onChange={((e) => setAddress(e.target.value))}/>
-                            </FormControl>
-                            <FormControl id="phoneNumber" isRequired>
+                                    onChange={((e) => setAddress(e.target.value))} />
+
                                 <FormLabel>Phone Number</FormLabel>
                                 <Input type="text" data-testid='phoneNumber'
-                    onChange={((e) => setPhoneNumber(e.target.value))}/>
-                            </FormControl>
-                            <FormControl id="birthDate" isRequired>
+                                    onChange={((e) => setPhoneNumber(e.target.value))} />
+
                                 <FormLabel>Birth Date</FormLabel>
                                 <Input type="date" data-testid='date'
-                    onChange={(e) => setBirthDate(e.target.value)}/>
-                            </FormControl>
-                            <FormControl>
+                                    onChange={(e) => setBirthDate(e.target.value)} />
+
+
                                 <FormLabel>Gender</FormLabel>
                                 <Select name="Gender" id="input-gender" onChange={(e) => setGender(e.target.value)}
                                     data-testid='gender'>
@@ -132,8 +128,8 @@ const AddStudent = () => {
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </Select>
-                            </FormControl>
-                            <FormControl>
+
+
                                 <FormLabel>Program Study</FormLabel>
                                 <Select name="prody" id="input-prody" onChange={(e) => setProgramStudy(e.target.value)}
                                     data-testid='prody'>
@@ -150,26 +146,28 @@ const AddStudent = () => {
                                     <option value="Fisika">Fisika</option>
                                     <option value="Informatika">Informatika</option>
                                 </Select>
-                            </FormControl>
-                            <Stack spacing={10} pt={2}>
-                                <Button
-                                    loadingText="Submitting"
-                                    size="lg"
-                                    bg={'teal.400'}
-                                    color={'white'}
-                                    _hover={{
-                                        bg: 'green.500',
-                                    }}
-                                    onClick={handleSubmit}
+
+                                <Stack spacing={10} pt={2}>
+                                    <Button
+                                        loadingText="Submitting"
+                                        size="lg"
+                                        bg={'teal.400'}
+                                        color={'white'}
+                                        _hover={{
+                                            bg: 'green.500',
+                                        }}
+                                        onClick={handleSubmit}
+                                        data-testid='add-btn'
                                     >
-                                    Submit
-                                </Button>
-                            </Stack>
+                                        Submit
+                                    </Button>
+                                </Stack>
+                            </FormControl>
                         </Stack>
                     </Box>
                 </Stack>
             </Flex>
-        <Footer/>
+            <Footer />
         </>
     );
 };

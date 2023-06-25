@@ -57,7 +57,7 @@ const Student = () => {
 
   useEffect(() => {
     handleFilter();
-  });
+  },[dataFilter]);
 
   return (
     <>
