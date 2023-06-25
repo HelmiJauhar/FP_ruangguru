@@ -14,11 +14,11 @@ const NotFound = () => {
     return (
         <>
             <div>
-                <Box position='fixed' h='100%' w='100%' bgGradient='linear(to-r, #ED213A, #93291E)' color='white'>
+                <Box position='fixed' h='100%' w='100%' bgColor='red' color='white'>
                     <AbsoluteCenter axis='both'>
-                        <Heading margin='10px'>404 | Page Not Found</Heading>
+                        <Heading margin='10px'>404 | Not Found</Heading>
                         <Link href='/student'>
-                            <Button data-testid='student-btn' colorScheme='teal' size='lg'
+                            <Button data-testid='back' colorScheme='teal' size='lg'
                                 onClick={() => navigate(-1)}>
                                 Kembali ke halaman sebelumnya
                             </Button>

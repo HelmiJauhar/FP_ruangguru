@@ -39,6 +39,7 @@ const NavBar = () => {
                                 aria-label="About"
                                 my={5}
                                 w="100%"
+                                data-testid='student-btn'
                             >
                                 All Student
                             </Button>
